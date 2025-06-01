@@ -8,7 +8,7 @@ export default function RootLayout() {
 
   const parseIndices = (input: string) => {
     setIndices(input);
-    setResult(input.split(/[,.\s]/).map(v => password[Number(v) - 1]).join(' '));
+    setResult(input.split(/[-,.\s]/).map(v => password[Number(v) - 1]).join('  '));
   }
 
   return (
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: '#f8f8f8',
     alignItems: 'center',
-    paddingTop: 80, 
+    paddingTop: 300, 
     paddingHorizontal: 30, 
   },
   input: {
